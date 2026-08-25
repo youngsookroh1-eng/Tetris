@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Board Canvas -->
+        <canvas id="game-board" width="300" height="600"></canvas>
+        
+        <!-- Side Panel -->
+        <div class="side-panel">
+            <h1 class="title">TETRIS</h1>
+            
+            <div class="info-box next-piece-box">
+                <h2>NEXT</h2>
+                <canvas id="next-piece" width="120" height="120"></canvas>
+            </div>
+
+            <div class="info-box">
+                <h2>SCORE</h2>
+                <div id="score" class="value">0</div>
+            </div>
+            
+            <div class="info-box">
+                <h2>LEVEL</h2>
+                <div id="level" class="value">1</div>
+            </div>
+
+            <div class="controls-box">
+                <button id="pause-btn" class="btn">Pause</button>
+                <button id="restart-btn" class="btn primary">Restart</button>
+            </div>
+            
+            <div class="instructions">
+                <p><strong>Controls:</strong></p>
+                <p><span>&larr; &rarr;</span> Move</p>
+                <p><span>&uarr;</span> Rotate</p>
+                <p><span>&darr;</span> Soft Drop</p>
+                <p><span>Space</span> Hard Drop</p>
+            </div>
+        </div>
+        
+        <!-- Game Over / Pause Overlay -->
+        <div id="overlay" class="overlay hidden">
+            <h2 id="overlay-title">PAUSED</h2>
+            <p id="overlay-text">Press Pause to resume</p>
+            <button id="overlay-btn" class="btn primary">Resume</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
