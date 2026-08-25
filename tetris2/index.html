@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Player Tetris Battle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tetris Battle</h1>
+        <div class="controls">
+            <button id="pause-btn">Pause</button>
+            <button id="resume-btn" disabled>Resume</button>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <!-- Player 1 -->
+        <section class="player-area player1">
+            <div class="stats">
+                <h2>Player 1</h2>
+                <p>Score: <span id="p1-score">0</span></p>
+                <div class="next-piece">
+                    <p>Next:</p>
+                    <canvas id="p1-next-canvas" width="100" height="100"></canvas>
+                </div>
+            </div>
+            <div class="board-container">
+                <canvas id="p1-canvas" width="300" height="600"></canvas>
+                <div class="game-over-overlay" id="p1-game-over">GAME OVER</div>
+            </div>
+            <div class="instructions">
+                <p><strong>Controls</strong></p>
+                <p>W: Rotate</p>
+                <p>A/D: Move L/R</p>
+                <p>S: Soft Drop</p>
+                <p>L-Shift: Hard Drop</p>
+            </div>
+        </section>
+
+        <!-- Player 2 -->
+        <section class="player-area player2">
+            <div class="stats">
+                <h2>Player 2</h2>
+                <p>Score: <span id="p2-score">0</span></p>
+                <div class="next-piece">
+                    <p>Next:</p>
+                    <canvas id="p2-next-canvas" width="100" height="100"></canvas>
+                </div>
+            </div>
+            <div class="board-container">
+                <canvas id="p2-canvas" width="300" height="600"></canvas>
+                <div class="game-over-overlay" id="p2-game-over">GAME OVER</div>
+            </div>
+            <div class="instructions">
+                <p><strong>Controls</strong></p>
+                <p>Up: Rotate</p>
+                <p>Left/Right: Move L/R</p>
+                <p>Down: Soft Drop</p>
+                <p>Space: Hard Drop</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
